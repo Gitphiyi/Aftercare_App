@@ -1,14 +1,17 @@
-import Home from "./Components/Home";
+import Profile from "./Components/Profile";
 import Login from "./Components/Login";
-import Navbar from "./Components/Navbar";
+// import Navbar from "./Components/Navbar";
+
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 
 function App() {
   return (
-      <div>
-        <Login />
-        <Navbar />
-        <Home />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
